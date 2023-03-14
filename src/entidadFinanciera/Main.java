@@ -39,10 +39,11 @@ public class Main {
         }
     }
     
-    public static void probarRetirar(CCuenta c, int cantidad, int cantidadEsperada) throws Exception{
+    public static void probarRetirar(CCuenta c, int cantidad, int cantidadEsperada) throws Exception {
         c.retirar(cantidad);
         double saldoActual = c.estado();
-        if (saldoActual != cantidadEsperada){
+        if (saldoActual != cantidadEsperada) {
             throw new Exception("La cantidad esperada no coincide con el saldo actual");
+        }
     }
-}
+}    
